@@ -1,0 +1,82 @@
+:root {
+    --yellow-primary: #f1ca6e;
+    --yellow-secondary: #FFDD8F;
+    --blue-primary: #2B51A6;
+    --blue-secondary: #6F98F2;
+    --brown: #A6863C;
+    --dark-color: #292929;
+    --white: #f8f9fa;
+}
+
+body {
+    color: var(--dark-color);
+}
+
+nav, footer {
+    background-color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-color)
+}
+
+main>.container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+}
+
+.sticky-footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+span>i {
+    color: var(--yellow-primary)
+}
+
+
+footer .social>a {
+    color: var(--white);
+}
+
+footer .social>a:hover {
+    color: var(--blue-secondary);
+}
+
+.js-icon {
+    color: #f0db4f;
+}
+
+.bootstrap-icon {
+    background: #DA22FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8a83f2, #6f10f4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8a83f2, #6f10f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.html5-icon {
+    background: #e34c26;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e34c26, #f06529);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e34c26, #f06529); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.css-icon {
+    background: #e34c26;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #264de4, #2965f1);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #264de4, #2965f1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+code[class*="language-"],
+    pre[class*="language-"] {
+        white-space: pre-wrap;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
