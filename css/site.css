@@ -1,22 +1,61 @@
 :root {
-    --yellow-primary: #f1ca6e;
-    --yellow-secondary: #FFDD8F;
-    --blue-primary: #2B51A6;
-    --blue-secondary: #6F98F2;
-    --brown: #A6863C;
-    --dark-color: #292929;
+    --dark-color: #272727ff;
+    --xiketic: #121420;
+    --mango-tango: #ff8c42ff;
+    --flickr-blue: #3b65ceff;
+    --malachite: #53dd6cff;
+    --sky-blue-crayola: #76e5fc;
+    --eton-blue: #89bd9eff;
+    --maximum-blue-purple: #adadffff;
     --white: #f8f9fa;
 }
 
+/* Fizz Buzz Specific Styling */
+.fizz-buzz-font {
+    font-family: 'M PLUS Rounded 1c', sans-serif !important;
+}
+
+.nav-link:hover {
+    color: var(--malachite) !important;
+}
+
+.fizz-buzz-button {
+    border: solid 2px var(--xiketic);
+}
+
+.fizz-buzz-button:hover {
+    background-color: var(--mango-tango);
+    border: solid 2px var(--xiketic);
+    color: var(--white);
+}
+
+.fizz {
+    color: var(--malachite);
+}
+
+.buzz {
+    color: var(--sky-blue-crayola);
+}
+
+.standard {
+    color: var(--dark-color);
+}
+/* General CSS Styling */
 body {
     color: var(--dark-color);
 }
 
-nav, footer {
-    background-color: var(--dark-color);
+nav,
+footer {
+    background-color: var(--xiketic);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--dark-color)
 }
 
@@ -32,8 +71,9 @@ main>.container {
     width: 100%;
 }
 
+
 span>i {
-    color: var(--yellow-primary)
+    color: var(--maximum-blue-purple)
 }
 
 
@@ -42,7 +82,7 @@ footer .social>a {
 }
 
 footer .social>a:hover {
-    color: var(--blue-secondary);
+    color: var(--malachite);
 }
 
 .js-icon {
@@ -50,33 +90,45 @@ footer .social>a:hover {
 }
 
 .bootstrap-icon {
-    background: #DA22FF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8a83f2, #6f10f4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8a83f2, #6f10f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #DA22FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8a83f2, #6f10f4);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8a83f2, #6f10f4);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
 
 .html5-icon {
-    background: #e34c26;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e34c26, #f06529);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e34c26, #f06529); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #e34c26;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e34c26, #f06529);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e34c26, #f06529);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .css-icon {
-    background: #e34c26;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #264de4, #2965f1);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #264de4, #2965f1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #e34c26;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #264de4, #2965f1);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #264de4, #2965f1);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 code[class*="language-"],
-    pre[class*="language-"] {
-        white-space: pre-wrap;
-        word-break: break-all;
-        word-wrap: break-word;
-    }
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}

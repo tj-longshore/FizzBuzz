@@ -14,6 +14,11 @@
     <!-- Custom CSS -->
     <link href="css/site.css" rel="stylesheet" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 
@@ -30,8 +35,8 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/TL_Shadow_Circle_Dark.png"
-                    class="d-inline-block align-text-top me-2" width="30">App Name</a>
+            <a class="navbar-brand" href="#"><img src="img/FizzBuzz Letters.png"
+                    class="d-inline-block align-text-top me-2 fizz-buzz-font" width="30">FizzBuzz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +53,7 @@
                         <a class="nav-link" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">Git Repo</a>
+                        <a class="nav-link" href="https://github.com/tj-longshore/FizzBuzz" target="_blank">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://tj-longshore-portfolio.netlify.app/" target="_blank">About</a>
@@ -59,14 +64,54 @@
     </nav>
 
     <!-- Main Section -->
-
     <main class="flex-shrink-0 pb-5">
-        <div class="container">
-
+        <div class="container col-xxl-8 mt-5 px-4 py-5">
+            <div class="row border-bottom border-2">
+                <h1 class="display-5 fw-bold fizz-buzz-font">FizzBuzz</h1>
+                <p class="lead">Description Here</p>
+            </div>
+            <div class="row g-5 py-5 row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <h2 class="col-md-4">Instructions</h2>
+                    <p>Input a desired range of numbers in the form fields. Then input desired values for Fizz and Buzz. Values that are divisible by the Fizz and Buzz values will display "Fizz" and "Buzz" respectively. If the number is divisible by both Fizz and Buzz it will display "FizzBuzz"</p>
+                </div>
+                <div class="col">
+                    <h4 class="border-bottom border-2">Enter Values Here</h4>
+                    <form class="row row-cols-1 row-cols-md-2 gy-2 gx-3">
+                        <div class="col-6">
+                            <label class="form-label">Starting Value</label>
+                            <input id="startingValue" type="number" class="form-control" placeholder="Starting Value" value="0" aria-label="Starting Value">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Ending Value</label>
+                            <input id="endingValue" type="number" class="form-control" placeholder="Ending Value" value="100" aria-label="Ending Value">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <label class="form-label">Fizz Value</label>
+                            <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value (default is 3)" value="3" aria-label="Fizz Value">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <label class="form-label">Buzz Value</label>
+                            <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value (default is 5)" value="5" aria-label="Buzz Value">
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="button" id="btnSubmit" class="btn btn-lg fizz-buzz-button">Fizz Buzz!</button>
+                        </div>
+                    </form>
+                    <h4 class="mt-5 border-bottom border-2">Results</h4>
+                    <div class="table-responsive pb-5">
+                        <table class="table table-striped">
+                            <tbody id="results">
+                                <!-- Results Go Here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <!-- Footer Section -->
 
+    <!-- Footer Section -->
     <footer class="footer mt-auto py-3 sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-md-3 d-flex align-items-center gy-2">
@@ -98,6 +143,10 @@
     </script>
     <!-- Custom JS -->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
+
 
 </html>
