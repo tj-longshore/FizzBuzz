@@ -32,13 +32,13 @@ function generateNumbers(sValue, eValue){
     buzzValue = parseInt(buzzValue);
 
     for (let i = sValue; i <= eValue; i++){
-        if ((i % fizzValue === 0) && (i % buzzValue === 0)){
-            numbers[i] = "FizzBuzz";
+       if ((i % fizzValue === 0) && (i % buzzValue === 0)){
+            numbers.push("FizzBuzz")
         } else if (i % fizzValue === 0) {
-            numbers[i] = "Fizz";
+            numbers.push("Fizz")
         } else if (i % buzzValue === 0) {
-            numbers[i] = "Buzz";
-        } else {
+            numbers.push("Buzz")
+        } else { 
             numbers.push(i);
         }
     }
@@ -59,10 +59,11 @@ function displayNumbers(numbers){
 
         if (number == "FizzBuzz"){
             number = `<span class="fizz">Fizz</span><span class="buzz">Buzz</span>`;
+            className = "fizzbuzz-background"
         }else if(number == "Fizz"){
-            className = "fizz";
+            className = "fizz fizzbuzz-background";
         } else if(number == "Buzz") {
-            className = "buzz";
+            className = "buzz fizzbuzz-background";
         } else {
             className = "standard";
         }

@@ -31,11 +31,13 @@
 
 .fizz {
     color: var(--malachite);
-    background-color: var(--xiketic);
 }
 
 .buzz {
     color: var(--sky-blue-crayola);
+}
+
+.fizzbuzz-background {
     background-color: var(--xiketic);
 }
 

@@ -67,22 +67,110 @@
     <!-- Main Section -->
     <main class="flex-shrink-0 py-5">
         <div class="container-fluid py-5 px-5">
-            <h2 class="border-1 border-bottom border-dark">The Code</h2>
+            <h2 class="border-1 border-bottom border-dark fizz-buzz-font">The Code</h2>
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-md-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            //Call Hello World
-                            function HelloWorld(){
-                                alert("Hello World");
+                            //get range values from The App page
+                            //Start / controller function
+                            function getValues(){
+                                //get values from the page
+                                let startingValue = document.getElementById("startingValue").value;
+                                let endingValue = document.getElementById("endingValue").value;
+                            
+                                startingValue = parseInt(startingValue);
+                                endingValue = parseInt(endingValue);
+                                
+                            
+                                if(Number.isInteger(startingValue) && Number.isInteger(endingValue)){
+                                    //call generateNumbers
+                                    numbers = generateNumbers(startingValue, endingValue);
+                                    //call displayNumbers
+                                    displayNumbers(numbers);
+                                } else {
+                                    alert("Error: Values Entered Must Be Integers")
+                                }
+                            
+                            }
+                            
+                            //generate the numbers from the startingValue to endingValue
+                            //logic function(s)
+                            function generateNumbers(sValue, eValue){
+                                let numbers = [];
+                            
+                                let fizzValue = document.getElementById("fizzValue").value;
+                                let buzzValue = document.getElementById("buzzValue").value;
+                            
+                                fizzValue = parseInt(fizzValue);
+                                buzzValue = parseInt(buzzValue);
+                            
+                                for (let i = sValue; i &lt;= eValue; i++){
+                                   if ((i % fizzValue === 0) && (i % buzzValue === 0)){
+                                        numbers.push("FizzBuzz")
+                                    } else if (i % fizzValue === 0) {
+                                        numbers.push("Fizz")
+                                    } else if (i % buzzValue === 0) {
+                                        numbers.push("Buzz")
+                                    } else { 
+                                        numbers.push(i);
+                                    }
+                                }
+                                return numbers;
+                            }
+                            
+                            //display the numbers and mark even numbers bold
+                            //display or view function
+                            function displayNumbers(numbers){
+                            
+                                let templateRows = "";
+                            
+                                for(let i = 0; i &lt; numbers.length; i++){
+                            
+                                    let className = "standard";
+                            
+                                    let number = numbers[i];
+                            
+                                    if (number == "FizzBuzz"){
+                                        number = `&lt;span class="fizz">Fizz&lt;/span>&lt;span class="buzz">Buzz&lt;/span>`;
+                                        className = "fizzbuzz-background"
+                                    }else if(number == "Fizz"){
+                                        className = "fizz fizzbuzz-background";
+                                    } else if(number == "Buzz") {
+                                        className = "buzz fizzbuzz-background";
+                                    } else {
+                                        className = "standard";
+                                    }
+                                    templateRows += `&lt;tr class="${className}">&lt;td class="${className}">${number}&lt;/td>&lt;/tr>`;
+                                }
+                            
+                                document.getElementById("results").innerHTML = templateRows;
+                            
                             }
                         </code>
                     </pre>
                 </div>
                 <div class="col-md-4">
-                    <p> The Code is structured in one function</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of, "Hello World"</p>
+                    <!-- Code Intro -->
+                    <!-- getValues -->
+                    <h5 class="fizz-buzz-font border-bottom border-2 pb-2">getValues</h5>
+                    <p>The function getValues is the controller function.
+                    <br class="mb-3">
+                    First, the function retrieves the user input starting and ending values. It then checks if the numbers are integers and displays the numbers to the screen through the generateNumbers and displayNumbers functions</p>
+                    <!-- generateNumbers -->
+                    <h5 class="fizz-buzz-font border-bottom border-2 pb-2">generateNumbers</h5>
+                    <p>The function generateNumbers is the logic function
+                        <br class="mb-3">
+                        The function first creates an empty array and then retrieves the user input values for Fizz and Buzz. It then ensures that the values of Fizz and Buzz are integers.
+                        <br class="mb-3">
+                        A for loop and if-else statement then check to see if the index value "i" is divisible by the Fizz and Buzz values. It checks to see if it is divisible by both Fizz AND Buzz first, then checks for divisibility by Fizz and Buzz. Otherwise it pushes the index value to the array.
+                    </p>
+                    <!-- displayNumbers -->
+                    <h5 class="fizz-buzz-font border-bottom border-2 pb-2">displayNumbers</h5>
+                    <p>The function displayNumbers is the display function
+                        <br class="mb-3">
+                        The function establishes the variable template rows as an empty string. It then uses a for loop to check the values of the numbers and provide relevant styling.
+                    </p>
                 </div>
             </div>
         </div>
